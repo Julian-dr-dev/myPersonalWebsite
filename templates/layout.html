@@ -1,8 +1,13 @@
 <html>
+
+<head>
+    <title>Personal website of Julian Martinez</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+</head>
 <body>
 <header>
     <div class="container">
-        <h1 class="logo">THE PERSONAL WEBSITE OF JULIAN MARTINEZ</h1>
+        <h1 clas="logo">THE PERSONAL WEBSITE OF JULIAN MARTINEZ</h1>
         <strong><nav>
             <ul class="menu">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -13,5 +18,9 @@
         </strong>
     </div>
 </header>
+<div class="container">
+    {%block content%}
+    {%endblock%}
+</div>
 </body>
 </html>
